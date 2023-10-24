@@ -23,19 +23,35 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func setCellWidthHeight() {
         let width = collectionView.frame.size.width / 9
         let height = collectionView.frame.size.height / 6
-        let flowLayout = collectionView.collectionViewLayoutn as! UICollectionViewLayout
+        let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         flowLayout.itemSize = CGSize(width: width, height: height)
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in cv: UICollectionView) -> Int {
         return board.count
     }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ cv: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return board[section].count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+    func collectionView(_ cv: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = cv.dequeueReusableCell(withReuseIdentifier: "idCell" , for: indexPath) as! BoardCell
+        let boardItem = getBoardItem(indexPath)
+        cell.image.tintColor = boardItem.tileColor()
+        return cell
+    }
+    
+    
+    func collectionView(_ cv: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let column = indexPath.item
+        if var boardItem = getLowestEmptyBoardItem (column){
+            if let cell = collectionView.cellForItem(at: boardItem.indexPath) as? BoardCell{
+                cell.image.tintColor = currentTurnColor()
+                boardItem.tile = currentTurnTile()
+                updateBoardWithBoardItem(boardItem)
+                toggleTurn(turnImage)
+            }
+        }
     }
     
 }
