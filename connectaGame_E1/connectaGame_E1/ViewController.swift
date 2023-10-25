@@ -75,7 +75,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func resultAlert(_ title: String)
     {
-        let message = "\nRed " + String(redScore) + "\nYellow:  " + String(yellowScore)
+        let message = "\nGreen: " + String(redScore) + "\nYellow:  " + String(yellowScore)
         let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         ac.addAction (UIAlertAction(title: "Reset", style: .default, handler: {  [self] (_) in 
             resetBoard()

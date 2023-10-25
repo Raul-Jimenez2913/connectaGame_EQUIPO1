@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 enum Turn{
-    case Red
+    case Green
     case Yellow
     
 }
@@ -18,8 +18,8 @@ var currentTurn = Turn.Yellow
 
 func toggleTurn(_ turnImage: UIImageView){
     if yellowTurn(){
-        currentTurn = Turn.Red
-        turnImage.tintColor = .red
+        currentTurn = Turn.Green
+        turnImage.tintColor = .green
     }
     else{
         currentTurn  = Turn.Yellow
@@ -34,18 +34,18 @@ func yellowTurn () -> Bool {
 
 
 func redTurn () -> Bool {
-    return currentTurn == Turn.Red
+    return currentTurn == Turn.Green
 }
 
 
 func currentTurnTile() -> Tile{
-    return yellowTurn() ? Tile.Yellow : Tile.Red
+    return yellowTurn() ? Tile.Yellow : Tile.Green
 }
 
 func currentTurnColor () -> UIColor {
-    return yellowTurn() ? .systemYellow : .red
+    return yellowTurn() ? .systemYellow : .green
 }
 
 func currentTurnMensajeVictoria () -> String {
-    return yellowTurn() ? "Amarillo ganador" : "Rojo ganador"
+    return yellowTurn() ? "Amarillo ganador" : "Verde ganador"
 }

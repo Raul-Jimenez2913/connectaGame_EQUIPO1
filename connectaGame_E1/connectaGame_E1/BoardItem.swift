@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 enum Tile{
-    case Red
+    case Green
     case Yellow
     case Empty
 }
@@ -23,7 +23,7 @@ struct BoardItem {
     }
     
     func redTile() -> Bool {
-        return tile == Tile.Red
+        return tile == Tile.Green
     }
     
     func emptyTile() -> Bool {
@@ -32,7 +32,7 @@ struct BoardItem {
     
     func tileColor() -> UIColor {
         if redTile() {
-            return .red
+            return .green
         }
         if yellowTile() {
             return .systemYellow
