@@ -4,8 +4,8 @@ Integrantes: Christian Raul Jimenez, Rogelio Hernandez, Christian Flores
 Link Youtube: https://youtu.be/MnH6YKwm4NE?feature=shared
 
 El juego consiste en la creacion del clasico juego de conecta 4, en donde tenemos que juntar 4 fichas de un mismo color
-ya sea de forma horizontal, vertical o diagonal, nosotros creamos un multijugador en donde tenemos las fichas color verde
-y amarillo.
+ya sea de forma horizontal, vertical o diagonal para poder ganar, por lo que nosotros creamos un multijugador en donde tenemos las fichas color verde
+y amarillo, es decir, un color para cada jugador (max. 2 jugadores).
 
 Explicacion de la creacion del juego:
 
