@@ -1,7 +1,8 @@
 # connectaGame_EQUIPO1
 Integrantes: Christian Raul Jimenez, Rogelio Hernandez, Christian Flores
 
-Link Youtube: https://youtu.be/MnH6YKwm4NE?feature=shared
+Link del video sobre el funcionamiento del juego:
+https://youtu.be/MnH6YKwm4NE?feature=shared
 
 El juego consiste en la creacion del clasico juego de conecta 4, en donde tenemos que juntar 4 fichas de un mismo color
 ya sea de forma horizontal, vertical o diagonal para poder ganar, por lo que nosotros creamos un multijugador en donde tenemos las fichas color verde
